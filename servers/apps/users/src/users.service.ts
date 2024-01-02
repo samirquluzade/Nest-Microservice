@@ -202,7 +202,7 @@ export class UsersService {
     const { password, activationToken } = resetPasswordDto;
 
     const decoded = await this.jwtService.decode(activationToken);
-    if (!decoded) {
+    if (!decoded || decoded?.exp < Date.now()) {
       throw new BadRequestException('Invalid token');
     }
     const hashedPassword = await bcrypt.hash(password, 10);

@@ -1,5 +1,5 @@
-import styles from "@/src/utils/style";
 import { z } from "zod";
+import styles from "@/src/utils/styles";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
