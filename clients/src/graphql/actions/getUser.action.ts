@@ -1,6 +1,6 @@
 "use client";
 
-import { DocumentNode, gql } from "@apollo/client";
+import { gql, DocumentNode } from "@apollo/client";
 
 export const GET_USER: DocumentNode = gql`
   query {
